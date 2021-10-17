@@ -7,7 +7,7 @@ main {
 }
 .container {
     margin-top: 5rem;
-    width: 75rem;
+    width: 65rem;
     height: 60rem;
     display: flex;
     flex-direction: column;
@@ -18,52 +18,103 @@ main {
     margin-top: 2rem;
     margin-bottom: 0;
     border-radius: 1rem;
-    width: 70rem;
+    width: 60rem;
     height: 45rem;
     display: flex;
-    overflow: hidden;    
-    
+    overflow: hidden;        
 }
-img{
-    object-fit: cover;
-    width: 100rem;
-    height: 50rem;
+
+#radio2:checked ~ .image_cont > .radio2{
+    transform: translate(-60rem, 0rem);
+}
+#radio3:checked ~ .image_cont > .radio3{
+    transform: translate(-120rem, 0rem);
+}
+#radio4:checked ~ .image_cont > .radio4 {
+    transform: translate(-180rem, 0rem);
+}
+.image_slide {  
+    width: 60rem;
+    height: 45rem;
+    transform: translate(0rem, 0rem);
+    transition: 0.15s ease-in-out;
 }
 .text {
     margin-top: 0;
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
-    width: 70rem;
+    width: 60rem;
     height: 10rem;
     overflow: hidden;
 }
 .text_slider {
-    margin: 0;
-   height: 5rem;
-   width: 50rem;
-   display: flex;
+   margin: 0;
+   width: 40rem;
+   display: flex;  
 }
-.text_sl.active{   
+.text_sl {   
     margin: 0; 
-    display: block;
+    width: 20rem;
     font-size: 2rem;
-    letter-spacing: 0.2rem;
-}
-.text_sl {
     display: none;
+    letter-spacing: 0.2rem;
+    animation: anim 2s forwards;
 }
+.text_sl div {    
+    width: 100%;
+    overflow: hidden;
+}
+@keyframes anim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#radio1:checked ~ .text > .text_slider > .radio1, #radio2:checked ~ .text > .text_slider > .radio2, #radio3:checked ~ .text > .text_slider > .radio3, #radio4:checked ~ .text > .text_slider > .radio4{
+    display: block;    
+}
+
 .control {
     margin: 0;
     height: 5rem;
-    width: 10rem;
+    width: 12rem;
     display: flex;
     justify-content: space-between;
 }
-.control_circle {
+
+.container input {
+    display: none;
+}
+label {
     margin: 0;
     width: 1.2rem;
     height: 1.2rem;
     border-radius: 50%;
-    color:rgb(255, 255, 255);
+    border: 1px solid rgb(2, 8, 99);
+    background: rgb(2, 8, 99);
+    cursor: pointer;
+} 
+label:hover{
+    background: #fff;
+    border: 1px solid rgb(255, 255, 255);
+    content: "";
 }
+label:active {
+    background: rgb(238, 188, 25);
+    border: 1px solid rgb(238, 188, 25);
+    transition: 0.05s;
+}
+
+#radio1:checked ~ .text > .control > .label1, #radio2:checked ~ .text > .control > .label2, #radio3:checked ~ .text > .control > .label3, #radio4:checked ~ .text > .control > .label4  {
+    border: 1px solid rgb(255, 255, 255);
+    background: none;
+}
+label span {
+    display: block;
+    width: 3.6rem;
+    height: 3.6rem;
+}
+

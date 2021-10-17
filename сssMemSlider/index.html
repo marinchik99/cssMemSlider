@@ -11,24 +11,28 @@
 <body>
     <main>
         <section class="container">
+            <input type ="radio" name = "slider" class="control_circle1" checked id="radio1">
+            <input type ="radio" name = "slider" class="control_circle2" id="radio2">
+            <input type ="radio" name = "slider" class="control_circle3" id="radio3">
+            <input type ="radio" name = "slider" class="control_circle4" id="radio4">
         <div class = "image_cont">  
-            <img src="4.jpg" alt="">
-            <img src="1.jpg" alt="">
-            <img src="2.jpg" alt="">
-            <img src="3.jpg" alt="">        
+            <img class = "image_slide radio1" src="4.jpg" alt="">
+            <img class = "image_slide radio2" src="1.jpg" alt="">
+            <img class = "image_slide radio3" src="2.jpg" alt="">
+            <img class = "image_slide radio4" src="3.jpg" alt="">        
         </div>
         <div class = "text">
             <div class="text_slider">
-              <div class="text_sl active">RUN!</div>
-              <div class="text_sl">Directed by</div>
-              <div class="text_sl"> Ну че, бывает</div>
-              <div class="text_sl">Echoes of the past</div>
+              <div class="text_sl radio1">RUN!       </div>
+              <div class="text_sl radio2">Directed by</div>
+              <div class="text_sl radio3"> Ну че, бывает</div>
+              <div class="text_sl radio4">Echoes of the past</div>
             </div>
-            <div class="control"> 
-                <input type ="radio" name = "slider" class="control_circle" checked> </inpu>
-                <input type ="radio" name = "slider" class="control_circle"> </input>
-                <input type ="radio" name = "slider" class="control_circle"> </input>
-                <input type ="radio" name = "slider" class="control_circle"> </input>
+            <div class="control">                 
+                <label for="radio1" class="label1"><span></span></label>               
+                <label for="radio2" class="label2"><span></span></label>
+                <label for="radio3" class="label3"><span></span></label>                
+                <label for="radio4" class="label4"><span></span></label>
             </div>
         </div>
     </section>
