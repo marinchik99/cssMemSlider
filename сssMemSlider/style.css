@@ -2,6 +2,7 @@
     margin:auto;
 }
 main {
+    max-width: 1920px;
     width: 100rem;
     height: 60rem;
 }
@@ -19,7 +20,7 @@ main {
     margin-top: 2rem;
     margin-bottom: 0;
     border-radius: 1rem;
-    width: 90%;
+    width: 90%;    
     height: 45rem;
     display: flex;
     overflow: hidden;        
@@ -33,6 +34,7 @@ main {
 #radio4:checked ~ .image_cont > .radio4 {
     transform: translate(-300%, 0rem);
 }
+
 .image_slide {  
     width: 100%;
     height: 100%;
@@ -120,33 +122,45 @@ label span {
         align-items: center;
         justify-content: space-between;
         width: 90%;
-        height: 10rem;
+        height: 8rem;
     }
     main {
-        width: 60rem;
-        height: 60rem;
+        max-width: 420px;
+        width: 80%;
+        height: 40rem;
     }
     .container {
-        width: 65%;
-        height: 75%; 
+        width: 90%;
+        height: 65%; 
     }
     .image_cont{
         margin-top: 2rem;
         margin-bottom: 0;
         border-radius: 1rem;
         width: 90%;
-        height: 25rem;
+        height: 15rem;
         display: flex;
         overflow: hidden;        
     }
     .text_slider {
         margin: 0;
         width: 100%;
-        height: 7rem;
+        height: 6rem;
      }
-     .container {
-        width: 65%;
-        height: 65%;
+
+    .text_sl {   
+        font-size: 1rem;    
+    }
+    label {
+        width: 0.6rem;
+        height: 0.6rem;
+    } 
+    .control {
+        width: 6rem;
+    }
+    label span {
+        width: 1.6rem;
+        height: 1.6rem;
     }
 }
 
