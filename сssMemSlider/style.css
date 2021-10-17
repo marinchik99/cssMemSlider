@@ -7,9 +7,10 @@ main {
 }
 .container {
     margin-top: 5rem;
-    width: 65rem;
-    height: 60rem;
+    width: 65%;
+    height: 100%;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     justify-content: space-between;
    background-color: rgb(104, 103, 103); 
@@ -18,24 +19,23 @@ main {
     margin-top: 2rem;
     margin-bottom: 0;
     border-radius: 1rem;
-    width: 60rem;
+    width: 90%;
     height: 45rem;
     display: flex;
     overflow: hidden;        
 }
-
 #radio2:checked ~ .image_cont > .radio2{
-    transform: translate(-60rem, 0rem);
+    transform: translate(-100%, 0rem);
 }
 #radio3:checked ~ .image_cont > .radio3{
-    transform: translate(-120rem, 0rem);
+    transform: translate(-200%, 0rem);
 }
 #radio4:checked ~ .image_cont > .radio4 {
-    transform: translate(-180rem, 0rem);
+    transform: translate(-300%, 0rem);
 }
 .image_slide {  
-    width: 60rem;
-    height: 45rem;
+    width: 100%;
+    height: 100%;
     transform: translate(0rem, 0rem);
     transition: 0.15s ease-in-out;
 }
@@ -44,13 +44,14 @@ main {
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
-    width: 60rem;
+    width: 58rem;
     height: 10rem;
     overflow: hidden;
 }
 .text_slider {
    margin: 0;
    width: 40rem;
+   height: 7rem;
    display: flex;  
 }
 .text_sl {   
@@ -61,10 +62,7 @@ main {
     letter-spacing: 0.2rem;
     animation: anim 2s forwards;
 }
-.text_sl div {    
-    width: 100%;
-    overflow: hidden;
-}
+
 @keyframes anim {
     from {
         opacity: 0;
@@ -76,15 +74,13 @@ main {
 #radio1:checked ~ .text > .text_slider > .radio1, #radio2:checked ~ .text > .text_slider > .radio2, #radio3:checked ~ .text > .text_slider > .radio3, #radio4:checked ~ .text > .text_slider > .radio4{
     display: block;    
 }
-
 .control {
     margin: 0;
-    height: 5rem;
+    height: 2rem;
     width: 12rem;
     display: flex;
     justify-content: space-between;
 }
-
 .container input {
     display: none;
 }
@@ -116,5 +112,41 @@ label span {
     display: block;
     width: 3.6rem;
     height: 3.6rem;
+}
+@media screen and (max-width: 420px) {
+    .text {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        height: 10rem;
+    }
+    main {
+        width: 60rem;
+        height: 60rem;
+    }
+    .container {
+        width: 65%;
+        height: 75%; 
+    }
+    .image_cont{
+        margin-top: 2rem;
+        margin-bottom: 0;
+        border-radius: 1rem;
+        width: 90%;
+        height: 25rem;
+        display: flex;
+        overflow: hidden;        
+    }
+    .text_slider {
+        margin: 0;
+        width: 100%;
+        height: 7rem;
+     }
+     .container {
+        width: 65%;
+        height: 65%;
+    }
 }
 
