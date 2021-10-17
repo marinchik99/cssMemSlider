@@ -1,0 +1,166 @@
+*{
+    margin:auto;
+}
+main {
+    max-width: 1920px;
+    width: 100rem;
+    height: 60rem;
+}
+.container {
+    margin-top: 5rem;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+   background-color: rgb(104, 103, 103); 
+}
+.image_cont{
+    margin-top: 2rem;
+    margin-bottom: 0;
+    border-radius: 1rem;
+    width: 90%;    
+    height: 45rem;
+    display: flex;
+    overflow: hidden;        
+}
+#radio2:checked ~ .image_cont > .radio2{
+    transform: translate(-100%, 0rem);
+}
+#radio3:checked ~ .image_cont > .radio3{
+    transform: translate(-200%, 0rem);
+}
+#radio4:checked ~ .image_cont > .radio4 {
+    transform: translate(-300%, 0rem);
+}
+
+.image_slide {  
+    width: 100%;
+    height: 100%;
+    transform: translate(0rem, 0rem);
+    transition: 0.15s ease-in-out;
+}
+.text {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 58rem;
+    height: 10rem;
+    overflow: hidden;
+}
+.text_slider {
+   margin: 0;
+   width: 40rem;
+   height: 7rem;
+   display: flex;  
+}
+.text_sl {   
+    margin: 0; 
+    width: 20rem;
+    font-size: 2rem;
+    display: none;
+    letter-spacing: 0.2rem;
+    animation: anim 2s forwards;
+}
+
+@keyframes anim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#radio1:checked ~ .text > .text_slider > .radio1, #radio2:checked ~ .text > .text_slider > .radio2, #radio3:checked ~ .text > .text_slider > .radio3, #radio4:checked ~ .text > .text_slider > .radio4{
+    display: block;    
+}
+.control {
+    margin: 0;
+    height: 2rem;
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+}
+.container input {
+    display: none;
+}
+label {
+    margin: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 1px solid rgb(2, 8, 99);
+    background: rgb(2, 8, 99);
+    cursor: pointer;
+} 
+label:hover{
+    background: #fff;
+    border: 1px solid rgb(255, 255, 255);
+    content: "";
+}
+label:active {
+    background: rgb(238, 188, 25);
+    border: 1px solid rgb(238, 188, 25);
+    transition: 0.05s;
+}
+
+#radio1:checked ~ .text > .control > .label1, #radio2:checked ~ .text > .control > .label2, #radio3:checked ~ .text > .control > .label3, #radio4:checked ~ .text > .control > .label4  {
+    border: 1px solid rgb(255, 255, 255);
+    background: none;
+}
+label span {
+    display: block;
+    width: 3.6rem;
+    height: 3.6rem;
+}
+@media screen and (max-width: 420px) {
+    .text {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        height: 8rem;
+    }
+    main {
+        max-width: 420px;
+        width: 80%;
+        height: 40rem;
+    }
+    .container {
+        width: 90%;
+        height: 65%; 
+    }
+    .image_cont{
+        margin-top: 2rem;
+        margin-bottom: 0;
+        border-radius: 1rem;
+        width: 90%;
+        height: 15rem;
+        display: flex;
+        overflow: hidden;        
+    }
+    .text_slider {
+        margin: 0;
+        width: 100%;
+        height: 6rem;
+     }
+
+    .text_sl {   
+        font-size: 1rem;    
+    }
+    label {
+        width: 0.5rem;
+        height: 0.5rem;
+    } 
+    .control {
+        width: 6rem;
+    }
+    label span {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
+
